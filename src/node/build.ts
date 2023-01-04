@@ -4,6 +4,8 @@ import {
   SERVER_ENTRY_PATH,
 } from './constants'
 export async function bundle(root: string) {
+  console.log(CLIENT_ENTRY_PATH, SERVER_ENTRY_PATH)
+
   try {
     const clientBuild = async () => {
       return viteBuild({
