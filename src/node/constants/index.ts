@@ -25,5 +25,5 @@ export const SERVER_ENTRY_PATH = join(
 
 export const DEFAULT_HTML_PATH = join(
   PACKAGE_ROOT,
-  'template.html'
+  'index.html'
 )
