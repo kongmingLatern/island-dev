@@ -6,16 +6,15 @@ import { createDevServer } from './dev'
 const cli = cac('island').version('0.0.1').help()
 
 cli
-  .command('dev [root]', 'start dev serve')
+  .command('dev [root]', 'start dev server')
   .action(async (root: string) => {
     const server = await createDevServer(root)
     await server.listen()
     server.printUrls()
-    console.log('dev', root)
   })
 
 cli
-  .command('build [root]', 'build for production')
+  .command('build [root]', 'build in production')
   .action(async (root: string) => {
     try {
       root = resolve(root)
@@ -24,4 +23,5 @@ cli
       console.log(e)
     }
   })
+
 cli.parse()
